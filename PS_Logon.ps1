@@ -1,12 +1,12 @@
 #region Global Settings
 $GlobalHash = [hashtable]::Synchronized(@{})
-$GlobalHash.CompanyName = "Wolcott, Wood and Taylor, Inc." 
-$GlobalHash.FileServer = "wwt-fp03.wwtps.com"
-$GlobalHash.FileServerHome = "wwt-fp01.wwtps.com"
-$GlobalHash.PrintServer = "uivmwwtps01.wwtps.com"
+$GlobalHash.CompanyName = "Company Name." 
+$GlobalHash.FileServer = "File Server"
+$GlobalHash.FileServerHome = "Home Drive Server"
+$GlobalHash.PrintServer = "Print Server"
 $GlobalHash.PrintGroupsOU = "LDAP://OU=Printers,OU=Groups,DC=wwtps,DC=com"
-$GlobalHash.Icon = "\\wwt-fp03.wwtps.com\Teams\it\Logos\Icons\WWT_AD_Photo_xp.ico"
-$GlobalHash.Logo = "http://www.wwtps.com/logos/WWT UoI PBG_Blue 350x120.png"
+$GlobalHash.Icon = "WWT_AD_Photo_xp.ico"
+$GlobalHash.Logo = "UoI PBG_Blue 350x120.png"
 $GlobalHash.LogoHight = 120
 $GlobalHash.LogoWidth = 350
 $GlobalHash.ExemptWorkstation = 0
@@ -17,13 +17,13 @@ $GlobalHash.PrintSpooler = $False
 $GlobalHash.ForcePrinter= "PDFCREATOR"
 $GlobalHash.StrPaperVisionWebAssistant = "C:\Program Files (x86)\Digitech Systems\PaperVision\PVWA\DSI.PVWA.Host.exe"
 $GlobalHash.ChangeDefault = $True
-$GlobalHash.LogUNC="\\wwt-fp01.wwtps.com\logs$\sessions_csv"
+$GlobalHash.LogUNC="Log_Location"
 # the Windows Dir is added at the end of the Setup the Shell Folders section
 $GlobalHash.CompanyDefaultWallpaper = ($env:SystemRoot + "\system32\oobe\info\backgrounds\background1920x1200.jpg")
 $GlobalHash.CompanyDefaultWallpaperStyle="2"
 #$GlobalHash.ComputerOULong = CStr(objSysInfo.ComputerName)
 $GlobalHash.StrContact = "Please contact Support Desk at: support@wwtps.com or 312-704-2854"
-$GlobalHash.MappedPrinters = (Get-WMIObject Win32_Printer -ComputerName $env:COMPUTERNAME | where{$_.Name -like ì*\\*î} | select sharename,name)
+$GlobalHash.MappedPrinters = (Get-WMIObject Win32_Printer -ComputerName $env:COMPUTERNAME | where{$_.Name -like ‚Äú*\\*‚Äù} | select sharename,name)
 
 #(Get-Printer | Select Name,ComputerName,Type,Portname,ShareName) 
 
